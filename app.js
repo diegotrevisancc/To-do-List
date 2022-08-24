@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const date = require(__dirname + "/date.js");
 
+
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
@@ -10,7 +11,7 @@ app.use(express.static("public"));
 var items = [];
 
 app.get("/", function (req, res) {
-    let day = date();
+    let day = date();    
     res.render('index', {currentDay: day, taskList: items}); 
     
 })
