@@ -12,7 +12,7 @@
 }
 
 h3, ::-webkit-input-placeholder {
-    font-family: var(--font-orbitron);
+    font-family: var(--font-ubuntu);
 }
 
 h1 {
@@ -58,20 +58,96 @@ nav h3{
     min-height: 50px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--text-color);
 }
 
 .item:last-child {
     border-bottom: 0;
 }
 
-#checkbox {
-    -webkit-appearance: none;
+input:checked+p {
+    text-decoration: line-through;
+    text-decoration-color: var(--text-color);
+    font-style: italic;
 }
 
-#new-item {
-    margin-bottom: 10px;
+input[type="checkbox"] {
+    margin: 10px;
 }
 
+.item-p {
+    margin: 0;
+    padding: 10px;
+    font-family: var(--font-qs);
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--text-color);
+}
 
+form {
+    display: flex;
+    align-content: flex-end;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 5%;
+    
+}
 
+#submit {
+    transition: all 0.5s;
+    cursor: pointer;
+    width: 20%;
+    background-color: var(--text-color);
+    border: none;
+    color: var(--main-color);
+    font-size: 2rem;
+    font-weight: 100;
+    font-family: var(--font-ubuntu);
+}
+
+#submit:hover {
+    background-color: white;
+    color: var(--text-color);
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 40px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 var(--bg-color);
+}
+
+::placeholder {
+  color: black;
+  opacity: 0.5;
+}
+
+footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin-top: 30px;
+  font-family: var(--font-ubuntu);
+}
+
+@media screen and (max-width:800px) {
+    nav {
+        font-size: 0.8rem;
+    }
+    
+    #main-content {
+        border:0;
+        border-radius: 0;
+        box-shadow: none;
+    
+    }
+}
