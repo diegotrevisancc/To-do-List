@@ -1,45 +1,77 @@
 :root {
-    --main-color: white;
-    --text-color:rgb(244, 164, 16);
+    --main-color:white;
+    --text-color:orange;
+    --bg-color: rgb(255, 166, 0);
+    --font-qs: 'Quicksand', sans-serif;
+    --font-ubuntu:'Ubuntu', sans-serif;
+    --font-orbitron:'Orbitron', sans-serif;
 }
 
 * {
     margin: 0;
 }
-h1, h3, p, ::-webkit-input-placeholder {
-    font-family: 'Quicksand', sans-serif;
+
+h3, ::-webkit-input-placeholder {
+    font-family: var(--font-orbitron);
 }
-body {
-    background-color: var(--main-color);
+
+h1 {
+    font-family: var(--font-ubuntu);    
+}
+
+html {
     color:var(--text-color);
     width: 100%;
+    min-height: 100vh;
+    background-image: -webkit-linear-gradient(75deg, var(--main-color) 50%, var(--bg-color) 50%);
 }
 
 /* Navbar */
 nav {
     display: flex;
-    background-color: var(--nav-color);
     color:var(--text-color);
     align-items: center;
     padding: 2% 15%;
     justify-content: space-between;
 }
 
+nav h3{
+    color: white;
+}
+
+
 /* Main Content */
 #main-content {
     padding: 2% 15%;
     text-align: center;
-    margin: 5px;
+    margin: 20px auto;
+    max-width: 400px;
+    min-height: 400px;
+    border: 1px solid rgba(59, 58, 58, 0.64);
+    border-radius: 20px;
+    box-shadow: -10px 5px 10px black;
+    background-color: var(--main-color);
+
 }
 
 .item {
+    min-height: 50px;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid black;
 }
 
+.item:last-child {
+    border-bottom: 0;
+}
 
+#checkbox {
+    -webkit-appearance: none;
+}
 
-/* Footer */
+#new-item {
+    margin-bottom: 10px;
+}
 
 
 
